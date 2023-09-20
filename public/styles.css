@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+}
+
+input[type="number"] {
+    width: 80%;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.minHeight {
+    min-height: 500px;
+}

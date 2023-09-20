@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response 42i challenge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="mx-5">
+    <div class="row mt-5">
+        <div class="col-3">
+            <div class="list-group">
+                <a id="question-1" href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Smallest Difference</h5>
+                        <small>Question 1</small>
+                    </div>
+                    <p class="mb-1">
+                        Given two arrays of integers, compute the pair of values (one value in each array) with the
+                        smallest (non-negative) difference. Return the difference.
+                    </p>
+                </a>
+                <a id="question-2" href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Non-Constructible Change</h5>
+                        <small class="text-muted">Question 2</small>
+                    </div>
+                    <p class="mb-1">
+                        Given an array of positive integers representing the values of coins in your possession, write a
+                        function that returns the minimum amount of change (the minimum sum of money) that
+                        you cannot create.
+                        The given coins can have any positive integer value and aren’t necessarily unique (i.e., you can
+                        have multiple coins of the same value).
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div id="answer-1" class="col-9">
+            <div class="row">
+                <div class="col-5 mx-2 minHeight">
+                    <h2>List 1</h2>
+                    <form id="number-form-1" class="row">
+                        <input type="number" id="number-input-1" class="form-control mb-3 col-auto" min="0"
+                            placeholder="Enter a positive number">
+                        <button type="button" id="add-button-1" class="btn btn-primary mb-3 col-auto">Add</button>
+                    </form>
+                    <div>
+                        <h3>Number List</h3>
+                        <ul id="list-1"></ul>
+                    </div>
+                </div>
+                <div class="col-5 mx-2 minHeight">
+                    <h2 class="col-12">List 2 </h2>
+                    <form id="number-form-2" class="row">
+                        <input type="number" id="number-input-2" class="form-control mb-3 col-auto" min="0"
+                            placeholder="Enter a positive number">
+                        <button type="button" id="add-button-2" class="btn btn-primary mb-3 col-auto">Add</button>
+                    </form>
+                    <div class="col-12">
+                        <h3>Number List</h3>
+                        <ul id="list-2"></ul>
+                    </div>
+                </div>
+                <button id="question-1-submit" type="button" class="btn btn-lg btn-primary" disabled>Submit</button>
+                <div id="result-question-1-container" class="col-12 hidden">
+                    <p id="result-question-1"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="answer-2" class="col-9 hidden">
+            <div class="row">
+                <div class="col-12 mx-2 minHeight">
+                    <h2 class="col-12">Coins</h2>
+                    <form id="coin-form" class="row">
+                        <input type="number" id="coins-input" class="form-control mb-3 col-auto" min="0"
+                            placeholder="Enter a value of the coin">
+                        <button type="button" id="add-coin-button" class="btn btn-primary mb-3 col-auto">Add</button>
+                    </form>
+                    <div class="col-12">
+                        <h3>Coin List</h3>
+                        <ul id="coin-list"></ul>
+                    </div>
+                </div>
+                <button id="question-2-submit" type="button" class="btn btn-lg btn-primary" disabled>Submit</button>
+                <div id="result-question-2-container" class="col-12 hidden">
+                    <p id="result-question-2">Result:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
