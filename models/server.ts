@@ -1,8 +1,11 @@
 import express, {Application} from 'express'
 import cors from 'cors'
 
-import { LOCAL_PUBLIC_FOLDER_PATH, CHALLENGE_PATH } from '../constants/routes.constant';
+import { LOCAL_PUBLIC_FOLDER_PATH, CHALLENGE_PATH, DOCS_PATH } from '../constants/routes.constant';
 import challengeRouter from '../routes/challenge.routes';
+
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../docs/swagger.json';
 
 export default class Server {
 
@@ -25,7 +28,9 @@ export default class Server {
 
         this.app.use(express.json());
 
-        this.app.use(express.static(LOCAL_PUBLIC_FOLDER_PATH))        
+        this.app.use(express.static(LOCAL_PUBLIC_FOLDER_PATH));
+
+        this.app.use(DOCS_PATH, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
     }
 
 
@@ -36,6 +41,7 @@ export default class Server {
     public listen(): void {
         this.app.listen(this.port, () => {
             console.log('Server is running in :', `http://localhost:${this.port}`);
+            console.log('You can find all documentation in :', `http://localhost:${this.port}/api-docs`);
         })
     }
 }
