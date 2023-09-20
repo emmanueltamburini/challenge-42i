@@ -53,3 +53,12 @@ Also there are other useful script that you could use:
 - `npm run dev`: use this to run the app with nodemon, in my case I used the version 2.0.20, to compile in real time every change (It is recommended that it be used in conjunction with the above command.)
 - `npm run debug`: use this to do the same of the above command but in debug mode.
 - `npm test`: use this to run the tests.
+
+If you want to generate the docker container, you can use the docker file in this project, just run the following command
+
+```bash
+    docker build -t challenge42i .
+    docker run -p 8000:8000 challenge42i
+```
+
+Pd: remember that you may have to use docker as a super user.

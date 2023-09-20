@@ -9,6 +9,7 @@
     "compile-dev": "tsc --watch",
     "dev": "npm run compile && nodemon dist/app",
     "debug": "npm run compile && nodemon --inspect dist/app",
+    "docker": "docker build -t challeng42i . && ",
     "test": "npm run compile && jest"
   },
   "repository": {
