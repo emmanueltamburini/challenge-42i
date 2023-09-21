@@ -40,9 +40,9 @@ For example, if you’re given coins = `[1, 2, 5]`, the minimum amount of chang
 
 Before that you must run `npm install` or `yarn` to install all dependencies of the app. In my case I used the following versions. Please be sure to have all these installations before to continue:
 
-npm: 8.19.3
-yarn: 1.22.19
-node: v19.1.0
+- npm: 8.19.3
+- yarn: 1.22.19
+- node: v19.1.0
 
 And finally you can run `npm start` or `yarn start` to compile the app and run this app. You can find this app in the server is running in : <http://localhost:8000> and all documentation in : <http://localhost:8000/api-docs>
 
